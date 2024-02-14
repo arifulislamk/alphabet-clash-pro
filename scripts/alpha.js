@@ -38,8 +38,11 @@ function handleKeyboradButtonpress(event){
         console.log('you loss.. taratari ja');
         const currentLife = getTextElemetsValueById('current-life');
         const updateLife = currentLife - 1 ;
-
         setTextElementById('current-life',updateLife)
+        if(updateLife === 0){
+            console.log('game over');
+            gameOver();
+        }
         // game life Update 
         // const curretLifeElement = document.getElementById('current-life');
         // const currentLifeText = curretLifeElement.innerText ;
@@ -63,7 +66,19 @@ function continueGame(){
         setbackgroundColorById(alphabet);
 }
 function play(){
+    
+    hideElementById('final-score')
     hideElementById('home');
     addElemnentById('play-grauond')
+
+    // reset life and score 
+    setTextElementById('current-score', 0 );
+    setTextElementById('current-life', 5 ) ;
+
     continueGame();
+}
+function gameOver(){
+    hideElementById('play-grauond') ;
+    addElemnentById('final-score') ;
+
 }
