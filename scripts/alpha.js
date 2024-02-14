@@ -8,7 +8,11 @@
 // }
 function continueGame(){
    const alphabet = randomAlphabets() ;
-    console.log('your ramdom alphabet', alphabet)
+    
+    const screenAlphabets = document.getElementById('alphabet-screen');
+        screenAlphabets.innerText = alphabet ;
+
+        setbackgroundColorById(alphabet);
 }
 function play(){
     hideElementById('home');
