@@ -10,37 +10,42 @@
 function handleKeyboradButtonpress(event){
     // playerpress key 
     const playerpressedkey = event.key ;
-    console.log('you press ' , playerpressedkey );
 
     // expected key to pressed 
     const screenAlphabets = document.getElementById('alphabet-screen') ;
     const screen = screenAlphabets.innerText ;
     const expectedKey = screen.toLowerCase();
-    console.log('beta eta chap' ,expectedKey);
 
     // cheek 
     if(expectedKey === playerpressedkey){
         console.log('beta you win nameje ja');
 
+        const currentScore = getTextElemetsValueById('current-score');
+        const updateScore = currentScore + 1 ;
+    
+        setTextElementById('current-score',updateScore)
         // score Update 
-        const currentScoreElement = document.getElementById('current-score') ;
-        const currentScoreText = currentScoreElement.innerText ;
-        const currentScore = parseInt(currentScoreText);
-        const newScore = currentScore + 1 ;
-        currentScoreElement.innerText = newScore ;
+        // const currentScoreElement = document.getElementById('current-score') ;
+        // const currentScoreText = currentScoreElement.innerText ;
+        // const currentScore = parseInt(currentScoreText);
+        // const newScore = currentScore + 1 ;
+        // currentScoreElement.innerText = newScore ;
 
         removebackgroundColorById(expectedKey)
         continueGame();
     }
     else{
         console.log('you loss.. taratari ja');
-        // game life Update 
-        const curretLifeElement = document.getElementById('current-life');
-        const currentLifeText = curretLifeElement.innerText ;
-        const currentLife = parseInt(currentLifeText);
+        const currentLife = getTextElemetsValueById('current-life');
+        const updateLife = currentLife - 1 ;
 
-        const newLIfe = currentLife - 1 ;
-        curretLifeElement.innerText = newLIfe ;
+        setTextElementById('current-life',updateLife)
+        // game life Update 
+        // const curretLifeElement = document.getElementById('current-life');
+        // const currentLifeText = curretLifeElement.innerText ;
+        // const currentLife = parseInt(currentLifeText);
+        // const newLIfe = currentLife - 1 ;
+        // curretLifeElement.innerText = newLIfe ;
     }
 }
 document.addEventListener('keyup' , handleKeyboradButtonpress );
