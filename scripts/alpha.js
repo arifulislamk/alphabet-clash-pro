@@ -20,10 +20,27 @@ function handleKeyboradButtonpress(event){
 
     // cheek 
     if(expectedKey === playerpressedkey){
-        console.log('beta you win nameje ja')
+        console.log('beta you win nameje ja');
+
+        // score Update 
+        const currentScoreElement = document.getElementById('current-score') ;
+        const currentScoreText = currentScoreElement.innerText ;
+        const currentScore = parseInt(currentScoreText);
+        const newScore = currentScore + 1 ;
+        currentScoreElement.innerText = newScore ;
+
+        removebackgroundColorById(expectedKey)
+        continueGame();
     }
     else{
-        console.log('you loss.. taratari ja')
+        console.log('you loss.. taratari ja');
+        // game life Update 
+        const curretLifeElement = document.getElementById('current-life');
+        const currentLifeText = curretLifeElement.innerText ;
+        const currentLife = parseInt(currentLifeText);
+
+        const newLIfe = currentLife - 1 ;
+        curretLifeElement.innerText = newLIfe ;
     }
 }
 document.addEventListener('keyup' , handleKeyboradButtonpress );
