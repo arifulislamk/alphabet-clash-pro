@@ -13,21 +13,99 @@
 
 <body>
     <main class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
-        <section class="home min-h-screen text-white flex flex-col items-center justify-center">
+        <!-- home section ? -->
+        <section class=" home min-h-screen text-white flex flex-col items-center justify-center">
             <div class="flex flex-col items-center gap-10">
                 <h1 class="text-8xl">ALPHABET CLASH </h1>
                 <p>Unleash Your Keyboard Kung Fu : Press “Enter” to </p>
-                <button class="btn">Play Now</button>
+                <button class="btn  bg-white text-black">Play Now</button>
             </div>
         </section>
-        <section class="play-gruoun bg-white text-black">
+        <!-- playgruound section  -->
+        <section class="hidden play-gruoun">
+            <div class="flex flex-col items-center gap-20 pt-20">
+                <!-- screen  -->
+                <div class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl
+                 border-[#010313CC] bg-[#FFFFFFB3]">
+                    <div class=" border-6 flex justify-center">
+                        <p class="bg-[#2F2941] text-white px-6 pb-4 rounded-b-xl">Don't watch keyboard  while playing...</p>
+                    </div>
+                    <div class="flex h-full justify-center items-center">
+                        <p class="text-white text-9xl font-bold ">Y</p>
+                    </div>
+                </div>
+                <!-- keyborad  -->
+                <div>
+                    <!-- keyboard star -->
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd">q</kbd>
+                        <kbd class="kbd">w</kbd>
+                        <kbd class="kbd">e</kbd>
+                        <kbd class="kbd">r</kbd>
+                        <kbd class="kbd">t</kbd>
+                        <kbd class="kbd">y</kbd>
+                        <kbd class="kbd">u</kbd>
+                        <kbd class="kbd">i</kbd>
+                        <kbd class="kbd">o</kbd>
+                        <kbd class="kbd">p</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd">a</kbd>
+                        <kbd class="kbd">s</kbd>
+                        <kbd class="kbd">d</kbd>
+                        <kbd class="kbd">f</kbd>
+                        <kbd class="kbd">g</kbd>
+                        <kbd class="kbd">h</kbd>
+                        <kbd class="kbd">j</kbd>
+                        <kbd class="kbd">k</kbd>
+                        <kbd class="kbd">l</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd">z</kbd>
+                        <kbd class="kbd">x</kbd>
+                        <kbd class="kbd">c</kbd>
+                        <kbd class="kbd">v</kbd>
+                        <kbd class="kbd">b</kbd>
+                        <kbd class="kbd">n</kbd>
+                        <kbd class="kbd">m</kbd>
+                        <kbd class="kbd">/</kbd>
+                    </div>  
+                </div>
+                <!-- keyboard end -->
 
+                <!-- score  -->
+                <div class="flex justify-between w-3/4">
+                    <button class="btn rounded-full bg-purple-300 text-white px-4">
+                        life
+                        <img src="images/heart.png" alt="">
+                        <span>1</span>
+                    </button>
+
+                    <button class="btn rounded-full bg-purple-700 text-white px-4">
+                        score
+                        <img src="images/doller (1).png" alt="">
+                        <span>1</span>
+                    </button>
+
+
+                </div>
+
+            </div>
         </section>
-        <section class="secore">
 
+        <!-- final score  -->
+        <section class=" hidden secore flex flex-col justify-center items-center min-h-screen">
+            <div class=" text-white text-center space-y-8 bg-[#FFFFFF33] p-4 rounded-lg">
+                <h1 class="text-8xl">
+                    <span class="font-extrabold">Score</span>
+                    <span>14</span>
+                </h1>
+                <button class="btn">Play Now</button>
+                <p>Practice will make you Pro</p>
+            </div>
         </section>
     </main>
-    <script src="scripts/tailwind.config.js"></script>
+    <script src="scripts/alpha.js"></script>
 </body>
 
 </html>
