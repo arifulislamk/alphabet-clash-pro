@@ -25,6 +25,11 @@ function setTextElementById (elementId, value){
     const element = document.getElementById(elementId);
     element.innerText = value ;
 }
+function getTextElemenstTextById(elementId){
+const element = document.getElementById(elementId);
+const text = element.innerText ;
+return text ;
+}
 function randomAlphabets(){
     // get alphabets 
     const alphabetsString = 'abcdefghijklmnopqrstuvwxyz';

@@ -11,6 +11,11 @@ function handleKeyboradButtonpress(event){
     // playerpress key 
     const playerpressedkey = event.key ;
 
+    // gameOver when player pressed escape button 
+    if(playerpressedkey === 'Escape'){
+        gameOver();
+    }
+
     // expected key to pressed 
     const screenAlphabets = document.getElementById('alphabet-screen') ;
     const screen = screenAlphabets.innerText ;
@@ -66,7 +71,7 @@ function continueGame(){
         setbackgroundColorById(alphabet);
 }
 function play(){
-    
+
     hideElementById('final-score')
     hideElementById('home');
     addElemnentById('play-grauond')
@@ -80,5 +85,13 @@ function play(){
 function gameOver(){
     hideElementById('play-grauond') ;
     addElemnentById('final-score') ;
+
+    // update score show 
+    const lastScore = getTextElemetsValueById ('current-score')
+    setTextElementById('last-score', lastScore);
+
+    // remove last alphabet backgruond color
+    const text = getTextElemenstTextById('alphabet-screen')
+    removebackgroundColorById(text);
 
 }
